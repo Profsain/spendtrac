@@ -9,6 +9,9 @@ gem 'rubocop'
 # devise for user authentication
 gem 'devise'
 
+# resource authorization
+gem 'cancancan'
+
 # rspec for testing
 gem 'rspec-rails'
 
