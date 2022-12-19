@@ -118,6 +118,7 @@ rspec spec
 ```Ruby
 > Rubocop --color
 > Rubocop -A
+> npx stylelint "**/*.{css,scss}"
 ```
 ## Author
 
