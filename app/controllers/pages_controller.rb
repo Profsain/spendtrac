@@ -1,4 +1,3 @@
 class PagesController < ApplicationController
-  def splashscreen
-  end
+  def splashscreen; end
 end

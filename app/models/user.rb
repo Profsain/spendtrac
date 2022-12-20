@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
-  
+
   has_many :categories, dependent: :destroy
   has_many :expenditures, dependent: :destroy
 
@@ -14,5 +14,4 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: email_regex }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true, length: { minimum: 6 }
-
 end
