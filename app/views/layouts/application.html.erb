@@ -6,18 +6,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# Bootstrap CSS %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link href="http://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1dea6ac3ad.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <% if notice %>
-      <p class="notice"><%= notice %></p>
+  <body class="border border-dark" style="min-height: 100vh;">
+    <% if current_user %>
+      <%= render partial: "shared/navbar" %>
+      <p class="username">Welcome <%= current_user.name %>!</p>
     <% end %>
-    <% if alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
-    
-    <%= yield %>
+
+    <div class="container">
+      <%if flash[:notice]%><p class="notice alert alert-success"><%= notice %></p> <%end%>
+      <%if flash[:alert]%> <p class="alert alert alert-danger"><%= alert %></p> <%end%>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
