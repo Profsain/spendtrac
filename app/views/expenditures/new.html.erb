@@ -12,6 +12,6 @@
       <%= form.label :category_id, 'Please select a category (ctrl+click for multiple selection):', class: "form-label" %>
       <%= form.select :category_id, Category.order(:name).where(user:current_user).pluck(:name, :id), {}, {:multiple => true, required:true, :id => "categories", :class => "form-select mb-3" } %>
       <%= form.submit 'Create transaction', class: "btn btn-success text-white" %>
-          <%= link_to "Back", categories_path, class: "btn btn-secondary"%>
+      <%= link_to "Back", categories_path, class: "btn btn-secondary"%>
     <% end %>
   </div>
