@@ -29,8 +29,6 @@ class CategoriesController < ApplicationController
       flash[:alert] = 'Category not created'
       render :new
     end
-
-    
   end
 
   private

@@ -144,7 +144,8 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse 
+I would like to thank Microverse team and Micronauts for their support
+- Special thanks to Gregoire Vella on <a href="https://www.behance.net/gregoirevella">Behance.</a> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
