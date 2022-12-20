@@ -1,0 +1,30 @@
+<div class="collapse text-white" id="navbarToggleExternalContent" style="background-color: #3778c2;">
+    <div class="collapse navbar-collapse d-flex flex-column align-items-center" id="navbarTogglerDemo01">
+      <%= render partial: "shared/applogo", class: "navbar-brand" %>
+      <ul class="navbar-nav d-flex flex-column align-items-center me-auto mb-2 mb-lg-0 w-100">
+        <li class="nav-item">
+          <%= link_to "Categories", categories_path, class: "nav-link active fs-6" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Categories", new_category_path, class: "nav-link active fs-6" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Transaction", new_expenditure_path, class: "nav-link active fs-6" %>
+        </li>
+      </ul>
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger my-2" %>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-primary mb-2">
+    <div class="container-fluid d-flex justify-content-between">
+      <button class="menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <h1 class="appname">SpendTrac</h1>
+      <h3 class="text-white mt-1">
+        <% if controller.controller_name == 'groups' && controller.action_name != 'show' %> Categories <% end %>
+        <% if (controller.controller_name == 'groups' && controller.action_name == 'show') || controller.controller_name == 'expenses' %> Transactions <% end %>
+      </h3>
+      <%= link_to '<i class="fa-regular fa-magnifying-glass"></i>'.html_safe, root_path %>
+    </div>
+  </nav>
