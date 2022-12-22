@@ -70,9 +70,9 @@ SpendTrac is a Ruby on Rails mobile web application where you can manage your bu
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo" href="https://salty-hamlet-02593.herokuapp.com/"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://salty-hamlet-02593.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
