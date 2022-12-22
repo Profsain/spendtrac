@@ -16,7 +16,6 @@ class ExpendituresController < ApplicationController
         render :new
       end
     end
-    
   end
 
   private
